@@ -4,11 +4,15 @@ public class Main{
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args){
+    // JAVA BANKING PROGRAM FOR BEGINNERS
 
+        // DECLARE VARIABLES
         double balance = 0;
         boolean isRunning = true;
         int choice;
 
+
+        // DISPLAY MENU
         while(isRunning){
             System.out.println("***************");
             System.out.println("BANKING PROGRAM");
@@ -21,6 +25,8 @@ public class Main{
             System.out.print("choose your option (1-4): ");
             choice = scanner.nextInt();
 
+
+        // GET AND PROCESS USERS CHOICE
             switch (choice){
                 case 1 -> showBalance(balance);
                 case 2 -> balance += deposit() ;
@@ -29,14 +35,18 @@ public class Main{
                 default -> System.out.println("Please enter a valid number");
             }
         }
+
+        // EXIT MESSAGE
         System.out.println("Thank you for Banking with us");
 
     }
-
+        // showBalance()
     static void showBalance(double balance){
         System.out.println("***************");
         System.out.printf("$%.2f\n", balance);
     }
+
+    // Deposit()
     static double deposit(){
         double amount;
 
@@ -53,8 +63,10 @@ public class Main{
 
 
     }
+
+    // Withdraw()
     static double withdraw(double balance){
-        double amount; 
+        double amount;
 
         System.out.print("Enter withdrawal amount: ");
         amount = scanner.nextDouble();
